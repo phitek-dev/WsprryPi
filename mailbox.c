@@ -60,7 +60,7 @@ void *mapmem(uint32_t base, uint32_t size)
     printf("base=0x%x, mem=%p\n", base, mem);
 #endif
     if (mem == MAP_FAILED) {
-        printf("mmap error %d\n", (int)mem);
+        printf("mmap error %p t\n", (void *)mem);
         exit (-1);
     }
     close(mem_fd);
